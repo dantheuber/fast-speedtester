@@ -5,7 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-log.txt
+log.csv
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -103,3 +103,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# pm2 config
+ecosystem.config.js

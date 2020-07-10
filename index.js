@@ -1,5 +1,5 @@
-import Speedtest from 'fast-speedtest-api';
-import { appendFile } from 'fs';
+const Speedtest = require('fast-speedtest-api');
+const { appendFile } = require('fs');
 
 const token = process.env.FAST_TOKEN;
 const envInterval = Number(process.env.FAST_TEST_INTERVAL);
@@ -25,7 +25,7 @@ const logResult = (speed) => {
   const now = new Date().toISOString();
   const log = `${now},${speed},Mbps\n`;
   return new Promise((resolve, reject) => {
-    appendFile('log.txt', log, 'utf8', (err) => {
+    appendFile('log.csv', log, 'utf8', (err) => {
       if (err) return reject(err);
       resolve();
     });
@@ -42,5 +42,6 @@ const runTest = () => speedTest.getSpeed()
   .then(runTest)
   .catch(handleError);
 
+console.log('Starting speed monitoring!');
 // start the loop
 runTest();
