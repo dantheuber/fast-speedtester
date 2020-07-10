@@ -22,9 +22,11 @@ const wait = () => new Promise((resolve) => {
 });
 
 const logResult = (speed) => {
+  const flatSpeed = Math.ceil(speed);
   const now = new Date().toISOString();
-  const log = `${now},${speed},Mbps\n`;
+  const log = `${now},${flatSpeed},Mbps\n`;
   return new Promise((resolve, reject) => {
+    console.log(`${flatSpeed} Mbps`);
     appendFile('log.csv', log, 'utf8', (err) => {
       if (err) return reject(err);
       resolve();
