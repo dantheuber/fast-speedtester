@@ -1,6 +1,6 @@
 {
   "name": "fast-speedtester",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Uses fast.com speedtest periodically in to keep a log of speed test results.",
   "main": "index.js",
   "scripts": {
