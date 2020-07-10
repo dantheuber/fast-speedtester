@@ -1,0 +1,23 @@
+{
+  "name": "fast-speedtester",
+  "version": "1.0.0",
+  "description": "Uses fast.com speedtest periodically in to keep a log of speed test results.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dantheuber/fast-speedtester.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dantheuber/fast-speedtester/issues"
+  },
+  "homepage": "https://github.com/dantheuber/fast-speedtester#readme",
+  "dependencies": {
+    "fast-speedtest-api": "^0.3.2"
+  }
+}
